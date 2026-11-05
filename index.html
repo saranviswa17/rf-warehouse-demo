@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#FFC20E">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="RF Device">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>RF Receiving &amp; Putaway</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="device">
+    <div class="statusbar" aria-hidden="true">
+      <span id="sb-site"></span>
+      <span id="sb-op"></span>
+      <span id="sb-time"></span>
+    </div>
+    <header class="appbar">
+      <div class="brand" aria-label="DC"><span class="brand-mark">DC</span></div>
+      <h1 id="title">Main Menu</h1>
+    </header>
+    <ol class="stepper" id="stepper" aria-label="Progress" hidden></ol>
+    <main id="screen" class="screen" aria-live="polite"></main>
+    <nav class="fkeys" aria-label="Function keys">
+      <button type="button" id="fk-back"><kbd>F3</kbd> Back</button>
+      <button type="button" id="fk-menu"><kbd>F4</kbd> Menu</button>
+    </nav>
+  </div>
+
+  <div id="cam" class="cam" role="dialog" aria-modal="true" aria-labelledby="cam-label" hidden>
+    <div class="cam-head">
+      <span id="cam-label">Scan</span>
+      <button type="button" id="cam-close" class="btn btn-dark btn-sm">Cancel</button>
+    </div>
+    <div id="reader" class="reader"></div>
+    <p id="cam-status" class="cam-status"></p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

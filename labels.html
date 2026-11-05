@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>RF Demo Test Labels</title>
+  <link rel="stylesheet" href="labels.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand" aria-label="DC"><span>DC</span></div>
+    <div>
+      <h1>RF Demo – Test Labels</h1>
+      <p>Print (or show on a second screen) and scan these with the RF app.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="index.html">Open RF app</a>
+      <button class="btn btn-primary" type="button" id="print">Print labels</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>1 · Open the app</h2>
+    <div class="grid">
+      <div class="label qr-label">
+        <div id="app-qr"></div>
+        <p class="cap">Scan with phone camera to open the RF device</p>
+        <p class="url" id="app-url"></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2 · Pallet LPN labels (inbound receiving)</h2>
+    <div class="grid" id="pallets"></div>
+  </section>
+
+  <section>
+    <h2>3 · Product barcodes (SKU – also accepted at receiving)</h2>
+    <div class="grid" id="products"></div>
+  </section>
+
+  <section>
+    <h2>4 · Bin labels (putaway destination)</h2>
+    <div class="grid" id="bins"></div>
+  </section>
+
+  <section>
+    <h2>5 · Exception scenarios</h2>
+    <div class="grid" id="exceptions"></div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="data.js"></script>
+  <script src="labels.js"></script>
+</body>
+</html>

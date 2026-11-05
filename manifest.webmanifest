@@ -1,0 +1,14 @@
+{
+  "name": "RF Receiving & Putaway",
+  "short_name": "RF Device",
+  "description": "Warehouse experience demo: inbound receiving and directed putaway from any phone.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1B1B1B",
+  "theme_color": "#FFC20E",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
