@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Outbound Documents</title>
+  <link rel="stylesheet" href="outbound.css">
+</head>
+<body>
+  <header class="top no-print">
+    <div>
+      <h1>Outbound – customer orders, Descartes routes, pick, VAS, pack &amp; ship</h1>
+      <p>Two customers → two sales orders → Descartes splits them to a FedEx route and a UPS route. Print at <b>100% / Actual size</b> with <b>Background graphics</b> on; each document prints on its own page.</p>
+    </div>
+    <nav class="actions">
+      <a class="btn" href="labels.html">Inbound labels</a>
+      <a class="btn" href="index.html">RF app</a>
+      <button class="btn" type="button" id="print-so">Print sales orders only</button>
+      <button class="btn btn-primary" type="button" id="print">Print all</button>
+    </nav>
+  </header>
+
+  <main id="docs"></main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="data.js"></script>
+  <script src="outbound.js"></script>
+</body>
+</html>

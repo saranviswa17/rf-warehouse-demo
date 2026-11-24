@@ -244,6 +244,62 @@ body {
 .msg.info { background: var(--info-bg); color: var(--info); border-color: var(--info); }
 .msg.warn { background: var(--warn-bg); color: var(--warn); border-color: var(--dc-yellow-dk); }
 
+/* carton checklist on Receive Pallet */
+.carton-list { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.carton-list li { display: grid; grid-template-columns: 18px 1fr auto; gap: 6px; align-items: center; color: var(--dc-gray); }
+.carton-list li.done { color: var(--ok); font-weight: 700; }
+.carton-list .small, .pallet-head .small { font-size: 11px; }
+.pallet-group { margin-top: 10px; border: 1px solid var(--dc-line); border-radius: 6px; padding: 6px 8px; }
+.pallet-group.focus { border: 2px solid var(--dc-black); background: #FFFBEA; }
+.pallet-head { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; font-size: 13px; }
+.pallet-group .carton-list { margin-top: 4px; }
+
+.carton-list .nobin-text { color: var(--err); font-weight: 800; }
+
+/* in-app confirm for Clear demo data */
+.confirm-clear { border: 2px solid var(--err); display: flex; flex-direction: column; gap: 8px; }
+
+/* putaway steps (HU-based putaway flow: HU -> UPC -> qty -> bin) */
+.put-steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; margin: 0; padding: 0; font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.put-steps li { text-align: center; padding: 6px 2px; border-radius: 6px; background: #E4E4E0; color: var(--dc-gray); }
+.put-steps li.ok { background: var(--ok-bg); color: var(--ok); }
+.put-steps li.ok::before { content: '✓ '; }
+.put-steps li.cur { background: var(--dc-black); color: var(--dc-yellow); }
+
+/* picking + pack */
+.order-card { border-left: 6px solid var(--dc-black); display: flex; flex-direction: column; gap: 6px; }
+.order-card.fedex { border-left-color: #4D148C; }
+.order-card.ups { border-left-color: #5E3A1A; }
+.order-card .row { display: flex; justify-content: space-between; align-items: center; }
+.fab-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+
+/* IT assistance (demo): black-apron IT team, mock ticket, gear, RESOLVED stamp */
+.btn-it { background: var(--dc-black); color: var(--dc-yellow); border-color: var(--dc-black); }
+.btn-it svg { width: 22px; height: 22px; }
+.ticket { border-left: 6px solid var(--dc-black); }
+.ticket-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.ticket-id { font: 800 15px var(--mono); }
+.it-working { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 0; font-weight: 700; }
+.gear-spin { width: 64px; height: 64px; color: var(--dc-black); animation: rf-spin 1.2s linear infinite; }
+.gear-spin svg { width: 100%; height: 100%; }
+@keyframes rf-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .gear-spin { animation: none; } }
+.stamp { align-self: center; transform: rotate(-6deg); border: 4px solid var(--ok); color: var(--ok); border-radius: 8px;
+  padding: 4px 18px; font: 900 30px var(--mono); letter-spacing: .12em; }
+.location.nobin { background: var(--err); }
+.location.nobin .big { color: #FFF; }
+.list-btn .bin.nobin { background: var(--err); color: #FFF; }
+
+/* exception-code override (demo) */
+.btn-ovr { background: #FFF; color: var(--err); border: 2px dashed var(--err); font-weight: 800; }
+.ovr-panel { display: flex; flex-direction: column; gap: 8px; background: #FFF; border: 2px solid var(--err); border-radius: 8px; padding: 12px; }
+.ovr-err { color: var(--err); font-size: 13px; font-weight: 700; }
+.ovr-codes { display: flex; flex-direction: column; gap: 6px; }
+.ovr-chip { display: flex; align-items: center; gap: 10px; text-align: left; background: var(--dc-bg); border: 1px solid var(--dc-line);
+  border-left: 6px solid var(--err); border-radius: 6px; padding: 8px 10px; font: inherit; cursor: pointer; color: var(--dc-black); }
+.ovr-chip b { font: 800 15px var(--mono); min-width: 48px; }
+.ovr-chip span { font-size: 13px; }
+.ovr-log { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 13px; }
 .pill {
   display: inline-block;
   padding: 3px 8px;
@@ -331,6 +387,7 @@ body {
 }
 .loc-cap { color: #CFCFCF; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
 .location .big { font: 800 40px/1.15 var(--mono); letter-spacing: .03em; margin-top: 4px; }
+.loc-type { color: var(--dc-yellow); font-size: 13px; font-weight: 800; margin-top: 2px; }
 .loc-parts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
 .loc-parts div { background: #2C2C2C; border-radius: 6px; padding: 6px 2px; }
 .loc-parts small { display: block; color: #A8A8A8; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }

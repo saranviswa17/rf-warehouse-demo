@@ -1,0 +1,41 @@
+/* Warehouse task (WT) documents – builds on outbound.css */
+.wt-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 14px; font-size: 12px; margin: 0 0 10px; }
+.wt-meta b { display: block; font-family: Consolas, 'Courier New', monospace; font-size: 12.5px; }
+/* Fixed column widths so every WT table fits the A4 print width (186 mm) */
+.wt-tbl { table-layout: fixed; width: 100%; font-size: 11px; }
+.wt-tbl th, .wt-tbl td { padding: 4px 4px; overflow-wrap: anywhere; }
+.wt-tbl th { font-size: 9.5px; }
+.wt-tbl.tasks th:nth-child(1) { width: 30mm; }
+.wt-tbl.tasks th:nth-child(2) { width: 18mm; }
+.wt-tbl.tasks th:nth-child(3) { width: 40mm; }
+.wt-tbl.tasks th:nth-child(4) { width: 12mm; }
+.wt-tbl.tasks th:nth-child(5) { width: 26mm; }
+.wt-tbl.tasks th:nth-child(6) { width: 28mm; }
+.wt-tbl.tasks th:nth-child(7) { width: 18mm; }
+.wt-tbl.tasks th:nth-child(8) { width: 14mm; }
+.wt-tbl.pack th:nth-child(1) { width: 34mm; }
+.wt-tbl.pack th:nth-child(2) { width: 26mm; }
+.wt-tbl.pack th:nth-child(3) { width: 50mm; }
+.wt-tbl.pack th:nth-child(4) { width: 18mm; }
+.wt-tbl.pack th:nth-child(5) { width: 38mm; }
+.wt-tbl.pack th:nth-child(6) { width: 20mm; }
+.wt-tbl td { vertical-align: middle; }
+.wt-tbl td.mono { white-space: pre-line; font-family: Consolas, 'Courier New', monospace; font-size: 10.5px; }
+.wt-tbl .bc svg { display: block; width: 100%; height: 8mm; }
+.wt-tbl .bc .t { font-family: Consolas, monospace; font-size: 10px; font-weight: 700; }
+.wt-tbl .prod b { display: block; }
+.wt-tbl .prod span { font-size: 11px; color: var(--gray); }
+.wt-tbl .qty { font-weight: 800; white-space: nowrap; }
+.wt-tbl .conf { white-space: pre-line; font-size: 10px; color: var(--gray); line-height: 1.6; }
+.wt-tbl tr.haz td { background: #FCE8E6; }
+.box { border: 2px solid var(--black); border-radius: 6px; padding: 8px 10px; margin-top: 10px; font-size: 12.5px; }
+.box h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.box ol, .box ul { margin: 0; padding-left: 18px; line-height: 1.55; }
+.kit-visual { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 6px; }
+.kit-visual .kit { border: 2px dashed var(--black); border-radius: 8px; padding: 6px 10px; font-weight: 800; font-size: 12px; text-align: center; }
+.kit-visual .kit small { display: block; font-weight: 400; color: var(--gray); }
+.hu-tree { font-family: Consolas, 'Courier New', monospace; font-size: 12px; line-height: 1.6; white-space: pre; margin: 0; }
+.sign { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; font-size: 12.5px; }
+.sign .line { margin-top: 12px; }
+.pill-haz { background: #B3261E; color: #FFF; font-weight: 900; font-size: 10.5px; padding: 1px 6px; border-radius: 3px; }
+.demo-foot { font-size: 10.5px; color: var(--gray); margin-top: 10px; }

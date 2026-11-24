@@ -1,0 +1,32 @@
+/* Compact carton label: exactly 45 x 45 mm (fits a 5 x 5 cm carton face with a 2.5 mm margin). */
+.clabel { width: 45mm; height: 45mm; overflow: hidden; background: #FFF; color: #1B1B1B; outline: 0.2mm solid #999;
+  padding: 1.4mm 1.6mm; display: flex; flex-direction: column; gap: .5mm; font-family: Arial, Helvetica, sans-serif;
+  break-inside: avoid; page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.clabel .mono { font-family: Consolas, 'Courier New', monospace; }
+.clabel .k { font-size: 1.5mm; font-weight: 700; letter-spacing: .04em; color: #5F5F5F; margin-top: .3mm; }
+.cl-top { display: flex; justify-content: space-between; align-items: center; font-size: 1.9mm; font-weight: 900; }
+.cl-n { background: #1B1B1B; color: #FFF; padding: .2mm 1mm; border-radius: .4mm; }
+.cl-p { border: 0.3mm solid #1B1B1B; padding: 0 .8mm; border-radius: .4mm; }
+.cl-prod { font-size: 3.1mm; font-weight: 900; line-height: 1.05; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cl-qty { font-size: 1.9mm; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cl-mid { display: flex; gap: 1.4mm; align-items: flex-start; }
+.cl-qr { width: 15mm; height: 15mm; flex: none; }
+.cl-qr img, .cl-qr canvas { width: 15mm !important; height: 15mm !important; display: block; }
+.cl-info { display: flex; flex-direction: column; font-size: 1.85mm; line-height: 1.15; min-width: 0; }
+.cl-bar { flex: 1; display: flex; align-items: center; min-height: 0; }
+.cl-bar svg { width: 100%; height: 100%; max-height: 8mm; }
+.cl-foot { display: flex; justify-content: space-between; align-items: center; font-size: 1.6mm; }
+.cl-haz { background: #B3261E; color: #FFF; font-weight: 900; font-size: 1.9mm; padding: .1mm 1mm; border-radius: .4mm; }
+.clabel.haz { outline: 0.4mm solid #B3261E; }
+.clabel-grid { display: flex; flex-wrap: wrap; gap: 6mm; }
+
+/* Product UPC label: exactly 45 x 25 mm */
+.ulabel { width: 45mm; height: 25mm; overflow: hidden; background: #FFF; color: #1B1B1B; outline: 0.2mm solid #999;
+  padding: 1.2mm 1.6mm; display: flex; flex-direction: column; font-family: Arial, Helvetica, sans-serif;
+  break-inside: avoid; page-break-inside: avoid; }
+.ul-top { display: flex; justify-content: space-between; align-items: baseline; gap: 1mm; }
+.ul-prod { font-size: 2.4mm; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ul-k { font-size: 1.7mm; font-weight: 700; color: #5F5F5F; }
+.ul-bar { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+.ul-bar svg { width: 38mm; height: 100%; }
+.ul-sku { font-size: 1.7mm; color: #5F5F5F; text-align: center; font-family: Consolas, 'Courier New', monospace; }

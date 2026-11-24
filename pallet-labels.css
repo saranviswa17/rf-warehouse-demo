@@ -1,0 +1,43 @@
+:root { --black: #1B1B1B; --gray: #5F5F5F; --yellow: #FFC20E; --red: #B3261E; color-scheme: light; }
+@page { size: A4 portrait; margin: 12mm; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #F2F2EF; color: var(--black); }
+body { font-family: Arial, Helvetica, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.top { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: var(--yellow); border-bottom: 3px solid var(--black); padding: 14px 16px; }
+.top h1 { margin: 0; font-size: 20px; }
+.top p { margin: 4px 0 0; font-size: 14px; }
+.actions { margin-left: auto; display: flex; gap: 8px; flex-wrap: wrap; }
+.btn { border: 2px solid var(--black); border-radius: 8px; background: #FFF; color: var(--black); font: 700 14px Arial, sans-serif;
+  padding: 10px 14px; text-decoration: none; cursor: pointer; }
+.btn-primary { background: var(--black); color: var(--yellow); }
+.check { padding: 0 16px; font-size: 13px; color: var(--gray); }
+
+.sheet { display: flex; flex-direction: column; gap: 4mm; padding: 16px; align-items: flex-start; }
+.sheet .sec { font-size: 3.4mm; text-transform: uppercase; letter-spacing: .04em; margin: 3mm 0 0; }
+.pallet-stack { display: flex; flex-direction: column; gap: 6mm; }
+
+/* The label: exactly 100 x 60 mm. The outer grey line is the cut line. */
+.plabel { width: 100mm; height: 60mm; overflow: hidden; background: #FFF; outline: 0.2mm solid #999; padding: 2.2mm 2.6mm;
+  display: flex; flex-direction: column; gap: 1mm; break-inside: avoid; page-break-inside: avoid; }
+.plabel .k { display: block; font-size: 1.9mm; font-weight: 700; letter-spacing: .05em; color: var(--gray); }
+.pl-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 0.5mm solid var(--black); padding-bottom: .6mm; }
+.pl-title { font-size: 4.4mm; font-weight: 900; letter-spacing: .02em; }
+.pl-count { font-size: 3.6mm; font-weight: 900; background: var(--black); color: #FFF; padding: .4mm 1.6mm; border-radius: .6mm; }
+.pl-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 2mm; font-size: 2.2mm; line-height: 1.2; }
+.pl-parties b { display: block; font-size: 2.6mm; }
+.pl-refs { display: grid; grid-template-columns: 1.3fr 1fr 1fr .8fr; gap: 1.2mm; font-size: 2.4mm; border-top: 0.2mm solid #BBB; padding-top: .6mm; }
+.pl-refs b { font-family: Consolas, 'Courier New', monospace; font-size: 2.5mm; }
+.pl-contents { font-size: 2.2mm; line-height: 1.2; border-top: 0.2mm solid #BBB; padding-top: .6mm; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-code { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; }
+.pl-code svg { width: 86mm; height: auto; max-height: 19mm; }
+.pl-foot { display: flex; justify-content: space-between; align-items: center; font-size: 2mm; color: var(--gray); }
+.pl-haz { font-size: 2.6mm; font-weight: 900; color: #FFF; background: var(--red); padding: .3mm 1.6mm; border-radius: .5mm; }
+.pl-demo { font-size: 2mm; font-weight: 700; }
+.plabel.haz { outline-color: var(--red); }
+
+@media print {
+  html, body { background: #FFF; }
+  .no-print { display: none !important; }
+  .sheet { padding: 0; gap: 10mm; }
+}

@@ -1,0 +1,22 @@
+/* Shipping, delivery & return documents – builds on outbound.css + warehouse-tasks.css */
+.sd-tbl { width: 100%; table-layout: fixed; font-size: 11.5px; }
+.sd-tbl th, .sd-tbl td { padding: 5px 5px; overflow-wrap: anywhere; }
+.sd-tbl tr.total td { font-weight: 800; border-top: 2px solid var(--black); }
+.sd-tbl tr.haz td { background: #FCE8E6; }
+.sd-tbl .bc svg { display: block; width: 100%; height: 8mm; }
+.sd-tbl .bc .t { font-family: Consolas, monospace; font-size: 10px; font-weight: 700; }
+.parties4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px 14px; font-size: 12px; margin-bottom: 10px; line-height: 1.35; }
+.parties4 > div { border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; }
+.ticket-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 14px; font-size: 12px; margin-bottom: 8px; }
+.ticket-grid b { display: block; }
+.status-row { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+.stamp-print { display: inline-block; transform: rotate(-6deg); border: 4px solid #1E7B34; color: #1E7B34; border-radius: 8px;
+  padding: 4px 18px; font: 900 26px Consolas, monospace; letter-spacing: .12em; }
+.big-sign { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; margin-top: 14px; font-size: 12px; }
+.big-sign .sigbox { border: 2px solid var(--black); border-radius: 6px; height: 26mm; padding: 4px 8px; }
+.checks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; font-size: 12px; margin-top: 8px; }
+.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 11.5px; font-weight: 700; margin: 6px 0 10px; }
+.flow span { border: 1.5px solid var(--black); border-radius: 4px; padding: 2px 8px; }
+.flow span.on { background: var(--black); color: var(--yellow); }
+.flow i { font-style: normal; color: var(--gray); }
+.note-strip { background: #FFF8DC; border: 1px solid #E5A900; border-radius: 6px; padding: 6px 8px; font-size: 12px; margin-top: 8px; }

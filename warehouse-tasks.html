@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Warehouse Tasks – Wave W-0901</title>
+  <link rel="stylesheet" href="outbound.css">
+  <link rel="stylesheet" href="warehouse-tasks.css">
+</head>
+<body>
+  <header class="top no-print">
+    <div>
+      <h1>Warehouse tasks (WT) – wave W-0901</h1>
+      <p>Picking WT for kitting, fabrication WT, and packing &amp; line-haul WT for SO-5001 and SO-5002. Print at <b>100% / Actual size</b> with <b>Background graphics</b> on.</p>
+    </div>
+    <nav class="actions">
+      <a class="btn" href="outbound.html">Outbound documents</a>
+      <a class="btn" href="index.html">RF app</a>
+      <button class="btn btn-primary" type="button" id="print">Print</button>
+    </nav>
+  </header>
+
+  <main id="docs"></main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="data.js"></script>
+  <script src="warehouse-tasks.js"></script>
+</body>
+</html>

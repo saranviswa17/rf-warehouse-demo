@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <title>Vendor Pallet Labels</title>
+  <link rel="stylesheet" href="pallet-labels.css">
+  <link rel="stylesheet" href="carton-label.css">
+</head>
+<body>
+  <header class="top no-print">
+    <div>
+      <h1>Vendor labels – pallets 10 × 6 cm, cartons 4.5 × 4.5 cm</h1>
+      <p>One truck, two pallets, six cartons. Ship-from / ship-to are on the pallet labels; each carton gets a small SSCC label that fits a 5 × 5 cm carton.
+        Print at <b>100% / Actual size</b> with <b>Background graphics</b> on and cut on the grey lines.</p>
+    </div>
+    <div class="actions">
+      <a class="btn" href="labels.html">All test labels</a>
+      <button class="btn btn-primary" type="button" id="print">Print labels</button>
+    </div>
+  </header>
+
+  <main class="sheet">
+    <h2 class="sec">Pallet labels · 10 × 6 cm · one per pallet</h2>
+    <div id="sheet" class="pallet-stack"></div>
+    <h2 class="sec">Carton labels · 4.5 × 4.5 cm · one per carton (fits a 5 × 5 cm carton)</h2>
+    <div id="cartons" class="clabel-grid"></div>
+    <h2 class="sec">Product UPC labels · 4.5 × 2.5 cm · one per product (scanned at putaway)</h2>
+    <div id="upcs" class="clabel-grid"></div>
+  </main>
+  <p class="check no-print">Size check after printing: pallet labels 100 × 60 mm, carton labels 45 × 45 mm.</p>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="data.js"></script>
+  <script src="carton-label.js"></script>
+  <script src="pallet-labels.js"></script>
+</body>
+</html>

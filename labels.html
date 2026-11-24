@@ -8,6 +8,7 @@
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <title>RF Demo Test Labels</title>
   <link rel="stylesheet" href="labels.css">
+  <link rel="stylesheet" href="carton-label.css">
 </head>
 <body>
   <header class="top">
@@ -18,6 +19,7 @@
     </div>
     <div class="actions">
       <a class="btn" href="index.html">Open RF app</a>
+      <a class="btn" href="outbound.html">Outbound documents</a>
       <button class="btn btn-primary" type="button" id="print">Print labels</button>
     </div>
   </header>
@@ -34,28 +36,39 @@
   </section>
 
   <section>
-    <h2>2 · Pallet LPN labels (inbound receiving)</h2>
-    <div class="grid" id="pallets"></div>
+    <h2>2 · ASN – Advanced Shipping Notice (vendor → GA02)</h2>
+    <div id="asn-doc"></div>
   </section>
 
-  <section>
-    <h2>3 · Product barcodes (SKU – also accepted at receiving)</h2>
+  <section class="page">
+    <h2>3 · Pallet labels (one per pallet – scan shows that pallet's cartons) · <a href="pallet-labels.html">print 10 × 6 cm vendor pallet labels</a></h2>
+    <div class="grid" id="pallet"></div>
+  </section>
+
+  <section class="page">
+    <h2>4 · Carton labels 4.5 × 4.5 cm (one per carton – scan the SSCC at receiving; ship-from / ship-to are on the pallet label)</h2>
+    <div class="clabel-grid" id="cartons"></div>
+  </section>
+
+  <section class="page">
+    <h2>5 · Product UPC labels 4.5 × 2.5 cm (scan at putaway and picking; also accepted at receiving)</h2>
     <div class="grid" id="products"></div>
   </section>
 
   <section>
-    <h2>4 · Bin labels (putaway destination)</h2>
+    <h2>6 · Bin labels (putaway destination)</h2>
     <div class="grid" id="bins"></div>
   </section>
 
   <section>
-    <h2>5 · Exception scenarios</h2>
+    <h2>7 · Exception scenarios</h2>
     <div class="grid" id="exceptions"></div>
   </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="data.js"></script>
+  <script src="carton-label.js"></script>
   <script src="labels.js"></script>
 </body>
 </html>
